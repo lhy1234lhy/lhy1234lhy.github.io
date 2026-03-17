@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dev Blog</title>
 
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Consolas", "Pretendard", monospace;
+    }
+
+    body {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      display: flex;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 사이드바 */
+    .sidebar {
+      width: 280px;
+      height: 100vh;
+      background-color: #161b22;
+      padding: 30px 20px;
+      border-right: 1px solid #30363d;
+      position: fixed;
+    }
+
+    .profile {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .profile img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      border: 2px solid #30363d;
+    }
+
+    .profile h2 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .profile p {
+      font-size: 13px;
+      color: #8b949e;
+      line-height: 1.4;
+    }
+
+    .section-title {
+      font-size: 13px;
+      color: #8b949e;
+      margin: 20px 0 10px;
+    }
+
+    .tech-stack span {
+      display: inline-block;
+      background: #21262d;
+      padding: 5px 8px;
+      margin: 3px;
+      border-radius: 5px;
+      font-size: 12px;
+    }
+
+    /* 메인 영역 */
+    .main {
+      margin-left: 280px;
+      padding: 40px;
+      width: 100%;
+    }
+
+    .header {
+      margin-bottom: 40px;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      margin-bottom: 5px;
+    }
+
+    .header p {
+      color: #8b949e;
+      font-size: 14px;
+    }
+
+    /* 게시글 리스트 */
+    .post {
+      padding: 20px 0;
+      border-bottom: 1px solid #30363d;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .post:hover {
+      background-color: #161b22;
+    }
+
+    .post-title {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: #58a6ff;
+    }
+
+    .post-desc {
+      font-size: 14px;
+      color: #8b949e;
+      margin-bottom: 8px;
+    }
+
+    .post-meta {
+      font-size: 12px;
+      color: #6e7681;
+    }
+
+    /* 반응형 */
+    @media (max-width: 768px) {
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 사이드바 -->
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="https://via.placeholder.com/90" alt="profile">
+      <h2>하연 이</h2>
+      <p>
+        10년차 개발자<br/>
+        백엔드 & 프론트엔드<br/>
+        실무 중심 개발 기록 블로그
+      </p>
+    </div>
+
+    <div>
+      <div class="section-title">TECH STACK</div>
+      <div class="tech-stack">
+        <span>Java</span>
+        <span>Spring</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>SQL</span>
+        <span>Node.js</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-title">CONTACT</div>
+      <p style="font-size: 13px; color:#8b949e;">
+        email@example.com
+      </p>
+    </div>
+  </aside>
+
+  <!-- 메인 -->
+  <main class="main">
+    <div class="header">
+      <h1>Dev Log</h1>
+      <p>기록하지 않으면 남지 않는다.</p>
+    </div>
+
+    <!-- 게시글 -->
+    <div class="post">
+      <div class="post-title">[Spring] 트랜잭션 제대로 이해하기</div>
+      <div class="post-desc">
+        @Transactional의 동작 원리와 실무에서 터지는 문제 정리
+      </div>
+      <div class="post-meta">2026.03.17 · Backend</div>
+    </div>
+
+    <div class="post">
+      <div class="post-title">[JavaScript] 비동기 처리 완벽 정리</div>
+      <div class="post-desc">
+        Promise, async/await 헷갈리는 부분 한 번에 정리
+      </div>
+      <div class="post-meta">2026.03.15 · Frontend</div>
+    </div>
+
+    <div class="post">
+      <div class="post-title">[SQL] 인덱스 제대로 쓰는 법</div>
+      <div class="post-desc">
+        성능 개선을 위한 인덱스 전략과 주의사항
+      </div>
+      <div class="post-meta">2026.03.10 · Database</div>
+    </div>
+
+  </main>
+
+</body>
+</html>
